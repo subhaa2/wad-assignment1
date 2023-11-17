@@ -2,6 +2,7 @@
 console.log('Starting my File System module');
 const fs=require('fs').promises;
 
+
 const filesystem={
 
     
@@ -53,7 +54,30 @@ const filesystem={
         }catch (error){
             return false;
         }
+    },
+
+   //getting file info
+    async getFileInfo(filepath) {
+        try {
+            const stats = await fs.stat(filepath);
+            return stats;
+        } catch (error) {
+            throw new Error(`Error getting file information: ${error.message}`);
+        }
+    },
+
+    //reading contents in the directory
+    async readDirectory(dirPath) {
+        try {
+            const files = await fs.readdir(dirPath);
+            return files;
+        } catch (error) {
+            throw new Error(`Error reading directory: ${error.message}`);
+        }
     }
+    
+
+    
     
 }
 
