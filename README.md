@@ -40,18 +40,18 @@ console.log('Contents in directory:'+readDirContent) //returns content in a dire
 # APIS that are used
 
 readFile(filePath):
-    + Reads the file of the contents of a file and returns a Promise with the file data
+    * Reads the file of the contents of a file and returns a Promise with the file data
 writeFile(filePath,data):
-    + Writes data to a file and returns a Promise indicating success or failure
+    * Writes data to a file and returns a Promise indicating success or failure
 createDirectory(dirPath):
-    + creates a new directory path and returns a Promise indicating success or failure
+    * creates a new directory path and returns a Promise indicating success or failure
 fileExists(filepath):
-    + Checks if a file exists at a particular path and returns a boolean
+    * Checks if a file exists at a particular path and returns a boolean
 directoryExists(dirPath):
-    + Check if a directory exists at the specified path and returns a boolean
+    * Check if a directory exists at the specified path and returns a boolean
 getFileInfo(filepath):
-    + Gets the stats of a particular file
+    * Gets the stats of a particular file
 readDirectory(dirPath):
-    + Reads the content of specified directory path and returns the different file names in the directory
+    * Reads the content of specified directory path and returns the different file names in the directory
 
 
